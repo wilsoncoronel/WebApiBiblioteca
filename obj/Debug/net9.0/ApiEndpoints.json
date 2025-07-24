@@ -185,6 +185,27 @@
   },
   {
     "ContainingType": "HolaMundoWebAPI.Controllers.LibroController",
+    "Method": "Put",
+    "RelativePath": "api/libros/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "libroDto",
+        "Type": "HolaMundoWebAPI.DTOs.LibroCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HolaMundoWebAPI.Controllers.LibroController",
     "Method": "Delete",
     "RelativePath": "api/libros/{id}",
     "HttpMethod": "DELETE",

@@ -162,3 +162,4 @@ C:\Users\DOOMSLAYER\Desktop\HolaMundoWebAPI\obj\Debug\net9.0\rjimswa.dswa.cache.
 C:\Users\DOOMSLAYER\Desktop\HolaMundoWebAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\DOOMSLAYER\Desktop\HolaMundoWebAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\DOOMSLAYER\Desktop\HolaMundoWebAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\DOOMSLAYER\Desktop\HolaMundoWebAPI\obj\Debug\net9.0\HolaMundoWebAPI.sourcelink.json

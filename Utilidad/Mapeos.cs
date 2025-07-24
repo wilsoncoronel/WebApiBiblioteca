@@ -28,7 +28,7 @@ namespace HolaMundoWebAPI.Utilidad
         /*---------------------AutorLibro-------------------*/
         AutorLibro MapeoAutorLibroDtoAAutorLibroTb(AutorLibroDTO autorLibroDto);
         LibroDTO MapeoLibroTbALibroDto(Libro libroTb);
-
+        void MapLibroCreacionDtoToLibro(LibroCreacionDTO dto, Libro libro);
     }
     public class Mapeos: IMapeos
     {
@@ -202,6 +202,8 @@ namespace HolaMundoWebAPI.Utilidad
             return libro;
         }
 
+
+
         public LibroDTO MapeoLibroTbALibroDto(Libro libroTb) {
             return new LibroDTO
             {
@@ -214,6 +216,17 @@ namespace HolaMundoWebAPI.Utilidad
                 
                 }).ToList()
             };
+        }
+
+        public void MapLibroCreacionDtoToLibro(LibroCreacionDTO dto, Libro libro)
+        {
+            libro.Titulo = dto.Titulo;
+            // Si quieres sobrescribir la lista de autores
+            libro.Autores = dto.AutoresIds
+                .Select(id => new AutorLibro { 
+                    AutorId = id,
+                })
+                .ToList();
         }
     }
 }
