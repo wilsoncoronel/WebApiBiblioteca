@@ -30,21 +30,7 @@ namespace HolaMundoWebAPI.Controllers
             return autoresDto;
         }
 
-        //[HttpGet("{parametro1}/{parametro2?}")]
-        //public ActionResult Get(string parametro1, string parametro2 = "valor por defecto")
-        //{
-        //    return Ok(new { parametro1, parametro2 });
-        //}
-
-       /* [HttpGet("{nombre:alpha}")]//alpha indica que recibe un string
-        public async Task<IEnumerable<Autor>> Get(string nombre)
-        {
-            return await context.Autores.Where(x => x.Nombre.Contains(nombre)).ToListAsync();
-        }*/
-
-
         [HttpPost]
-
         public async Task<ActionResult> Post(AutorCreacionDTO autorCreacionDto)
         {
 
@@ -59,16 +45,15 @@ namespace HolaMundoWebAPI.Controllers
         public async Task<ActionResult<AutorConLibrosDTO>> Get(int id)
         {
             var autor = await context.Autores
-                .Include(x=> x.Libros)
+                .Include(a => a.Libros)
+                    .ThenInclude(x => x.Libro)
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (autor is null)
             {
                 return NotFound();
             }
-            
             return this.mapper.MapeoAutorAAutorConLibrosDto(autor);
         }
-
         
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)

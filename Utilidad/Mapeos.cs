@@ -15,6 +15,8 @@ namespace HolaMundoWebAPI.Utilidad
         LibroConAutorDTO MapeoLibroALibroConAutorDTO(Libro libro);
         AutorPatchDTO MapeoAutorAAutorPatchDto(Autor autor);
         void MapeoReversoAutorPatchDtoAAutor(AutorPatchDTO autorDto, Autor entidad);
+        LibroDTO MapeoLibroTbALibroDto(Libro libroTb);
+        void MapLibroCreacionDtoToLibro(LibroCreacionDTO dto, Libro libro);
         /*---------------Comentario--------------*/
         Comentario MapeoComentarioDtoAComentario(ComentarioCreacionDTO comentarioDto);
         ComentarioPatchDTO MapeoComentarioAComentarioPatchDto(Comentario comentario);
@@ -27,22 +29,24 @@ namespace HolaMundoWebAPI.Utilidad
 
         /*---------------------AutorLibro-------------------*/
         AutorLibro MapeoAutorLibroDtoAAutorLibroTb(AutorLibroDTO autorLibroDto);
-        LibroDTO MapeoLibroTbALibroDto(Libro libroTb);
-        void MapLibroCreacionDtoToLibro(LibroCreacionDTO dto, Libro libro);
+
+        /*--------------------------Mapeo ArraysAutores-------------------------*/
+        IEnumerable<Autor> MapeoColeccionAuotrCreacioAColeccionAutores(IEnumerable<AutorCreacionDTO> autoresCreacionDto);
+        List<AutorConLibrosDTO> MapeoColeccionAutorAAutoresColeccion(IEnumerable<Autor> autores);
     }
-    public class Mapeos: IMapeos
+    public class Mapeos : IMapeos
     {
 
         public AutorLibro MapeoAutorLibroDtoAAutorLibroTb(AutorLibroDTO autorLibroDto) {
             return new AutorLibro {
                 AutorId = autorLibroDto.AutorId,
-                LibroId =  autorLibroDto.LibroId,
+                LibroId = autorLibroDto.LibroId,
             };
         }
 
         public List<AutorLibro> MapeoArrayAutorLibroDtoAAutorLibroTb(IEnumerable<AutorLibroDTO> autorLibroDto)
         {
-            return autorLibroDto.Select(this.MapeoAutorLibroDtoAAutorLibroTb).ToList(); 
+            return autorLibroDto.Select(this.MapeoAutorLibroDtoAAutorLibroTb).ToList();
         }
 
         public void MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioDto, Comentario entidad)
@@ -50,7 +54,7 @@ namespace HolaMundoWebAPI.Utilidad
             entidad.Cuerpo = comentarioDto.Cuerpo;
         }
         public Comentario MapeoComentarioCreacionDtoAComentario(ComentarioCreacionDTO comentarioCreacionDto) {
-            return new Comentario { 
+            return new Comentario {
                 Cuerpo = comentarioCreacionDto.Cuerpo,
             };
         }
@@ -77,11 +81,10 @@ namespace HolaMundoWebAPI.Utilidad
         }
         public ComentarioPatchDTO MapeoComentarioAComentarioPatchDto(Comentario comentario) {
             return new ComentarioPatchDTO
-            { 
+            {
                 Cuerpo = comentario.Cuerpo,
             };
         }
-
         public Comentario MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioPatchDto)
         {
             return new Comentario
@@ -89,23 +92,19 @@ namespace HolaMundoWebAPI.Utilidad
                 Cuerpo = comentarioPatchDto.Cuerpo,
             };
         }
-
-       
-
-        public ComentarioCreacionDTO MapeoReversoComentarioAComentarioCreacionDto(Comentario comentario){
+        public ComentarioCreacionDTO MapeoReversoComentarioAComentarioCreacionDto(Comentario comentario) {
             return new ComentarioCreacionDTO
             {
                 Cuerpo = comentario.Cuerpo,
             };
         }
-        public AutorPatchDTO MapeoAutorAAutorPatchDto(Autor autor){
+        public AutorPatchDTO MapeoAutorAAutorPatchDto(Autor autor) {
             return new AutorPatchDTO
             {
                 Apellidos = autor.Apellidos,
                 Nombres = autor.Nombres,
                 Identificacion = autor.Identificacion
             };
-
         }
 
         //Este método no retorna nada, porque modifica directamente el objeto entidad, el cual ya está siendo trackeado por Entity Framework Core.
@@ -113,9 +112,9 @@ namespace HolaMundoWebAPI.Utilidad
         {
 
             entidad.Apellidos = autorDto.Apellidos;
-                entidad.Nombres = autorDto.Nombres;
-                entidad.Identificacion = autorDto.Identificacion;
-           
+            entidad.Nombres = autorDto.Nombres;
+            entidad.Identificacion = autorDto.Identificacion;
+
         }
 
         public AutorConLibrosDTO MapeoAutorAAutorConLibrosDto(Autor autor)
@@ -124,22 +123,20 @@ namespace HolaMundoWebAPI.Utilidad
             {
                 Id = autor.Id,
                 NombreCompleto = $"{autor.Nombres} {autor.Apellidos}",
-                //Libros = autor.Libros.Select(l => new LibroDTO
-                //{
-                //    Id = l.Id,
-                //    Titulo = l.Titulo,
-                //}).ToList()
+                Libros = autor.Libros.Select(l => new LibroDTO
+                {
+                    Id = l.Libro.Id,
+                    Titulo = l.Libro.Titulo
+                }).ToList()
             };
         }
         public AutorDTO MapeoAutorAAutorDto(Autor autor) {
 
-            return new AutorDTO { 
+            return new AutorDTO {
                 Id = autor.Id,
                 NombreCompleto = $"{autor.Nombres} {autor.Apellidos}"
             };
         }
-
-
         public IEnumerable<AutorDTO> MapeoArrayAutorAAutorDto(IEnumerable<Autor> autores)
         {
             //Metodo largo
@@ -153,7 +150,6 @@ namespace HolaMundoWebAPI.Utilidad
 
             return autores.Select(this.MapeoAutorAAutorDto);
         }
-
         public Autor MapeoAutorCreacionDtoAAutor(AutorCreacionDTO autorCreacionDto)
         {
             return new Autor
@@ -161,20 +157,32 @@ namespace HolaMundoWebAPI.Utilidad
                 Nombres = autorCreacionDto.Nombres,
                 Apellidos = autorCreacionDto.Apellidos,
                 Identificacion = autorCreacionDto.Identificacion,
+                Libros = autorCreacionDto.Libros.Select(l => new AutorLibro
+                {
+                    Libro = new Libro { Titulo = l.Titulo }
+                }).ToList()
             };
+        }
+        public IEnumerable<Autor> MapeoColeccionAuotrCreacioAColeccionAutores(IEnumerable<AutorCreacionDTO> autoresCreacionDto) {
+            
+            return autoresCreacionDto.Select(this.MapeoAutorCreacionDtoAAutor).ToList();
+        }
+       
+        public List<AutorConLibrosDTO> MapeoColeccionAutorAAutoresColeccion(IEnumerable<Autor> autores)
+        {
+            return autores.Select(this.MapeoAutorAAutorConLibrosDto).ToList();
         }
 
 
-       public LibroConAutorDTO MapeoLibroALibroConAutorDTO(Libro libro){
+        public LibroConAutorDTO MapeoLibroALibroConAutorDTO(Libro libro){
             return new LibroConAutorDTO
             {
                 Id = libro.Id,
                 Titulo = libro.Titulo,
-                //Autor = new 
-                //{
-                //    NombreCompleto = $"{libro.Autor.Apellidos} {libro.Autor.Nombres}",
-                //    Id = libro.Autor.Id
-                //}
+                Autores = libro.Autores.Select(a => new AutorDTO { 
+                    NombreCompleto = $"{a.Autor.Nombres} {a.Autor.Apellidos}",
+                    Id = a.Autor.Id,
+                }).ToList()
             };
         }
         public LibroDTO MapeoLibroALibroDto(Libro libro) 

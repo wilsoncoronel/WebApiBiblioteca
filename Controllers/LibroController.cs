@@ -31,6 +31,7 @@ namespace HolaMundoWebAPI.Controllers
         {
             var libroEncontrado = await context.Libros
                 .Include(x => x.Autores)
+                .ThenInclude(a => a.Autor)
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (libroEncontrado is null)
             {

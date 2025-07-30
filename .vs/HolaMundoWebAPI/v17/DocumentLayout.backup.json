@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\controllers\\autorescolleccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:controllers\\autorescolleccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\utilidad\\mapeos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:utilidad\\mapeos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\dtos\\autorcreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:dtos\\autorcreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\dtos\\autorconlibrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:dtos\\autorconlibrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\dtos\\librodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:dtos\\librodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\dtos\\libroconautordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|solutionrelative:dtos\\libroconautordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA83C253-3E19-4CC5-AAF2-54462A2846EB}|HolaMundoWebAPI.csproj|c:\\users\\doomslayer\\desktop\\holamundowebapi\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Libro.cs",
               "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Entidades\\Libro.cs",
               "RelativeDocumentMoniker": "Entidades\\Libro.cs",
@@ -48,7 +64,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "AutoresColleccionController.cs",
+              "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\AutoresColleccionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AutoresColleccionController.cs",
+              "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\AutoresColleccionController.cs",
+              "RelativeToolTip": "Controllers\\AutoresColleccionController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T10:21:55.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AutorCreacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\AutorCreacionDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\AutorCreacionDTO.cs",
+              "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\AutorCreacionDTO.cs",
+              "RelativeToolTip": "DTOs\\AutorCreacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T01:22:27.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LibroConAutorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\LibroConAutorDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LibroConAutorDTO.cs",
+              "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\LibroConAutorDTO.cs",
+              "RelativeToolTip": "DTOs\\LibroConAutorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T00:18:59.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutorConLibrosDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\AutorConLibrosDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\AutorConLibrosDTO.cs",
+              "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\AutorConLibrosDTO.cs",
+              "RelativeToolTip": "DTOs\\AutorConLibrosDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T21:47:40.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "LibroDTO.cs",
               "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\DTOs\\LibroDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\LibroDTO.cs",
@@ -61,39 +129,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "LibroController.cs",
               "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\LibroController.cs",
               "RelativeDocumentMoniker": "Controllers\\LibroController.cs",
               "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\LibroController.cs",
               "RelativeToolTip": "Controllers\\LibroController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAqwHMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-18T21:27:16.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AutoresController.cs",
               "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\AutoresController.cs",
               "RelativeDocumentMoniker": "Controllers\\AutoresController.cs",
               "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Controllers\\AutoresController.cs",
               "RelativeToolTip": "Controllers\\AutoresController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAiwHsAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T20:20:11.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Mapeos.cs",
               "DocumentMoniker": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Utilidad\\Mapeos.cs",
               "RelativeDocumentMoniker": "Utilidad\\Mapeos.cs",
               "ToolTip": "C:\\Users\\DOOMSLAYER\\Desktop\\HolaMundoWebAPI\\Utilidad\\Mapeos.cs",
               "RelativeToolTip": "Utilidad\\Mapeos.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwOYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAApwJEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T19:59:54.761Z",
               "EditorCaption": ""

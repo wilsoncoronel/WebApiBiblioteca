@@ -36,6 +36,49 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HolaMundoWebAPI.Controllers.AutoresColleccionController",
+    "Method": "Post",
+    "RelativePath": "api/autores-coleccion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "autoresCreacionDTO",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HolaMundoWebAPI.DTOs.AutorCreacionDTO, HolaMundoWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HolaMundoWebAPI.Controllers.AutoresColleccionController",
+    "Method": "Get",
+    "RelativePath": "api/autores-coleccion/{ids}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HolaMundoWebAPI.DTOs.AutorConLibrosDTO, HolaMundoWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ObtenerAutoresPorIds"
+  },
+  {
     "ContainingType": "HolaMundoWebAPI.Controllers.AutoresController",
     "Method": "Get",
     "RelativePath": "api/autores/{id}",

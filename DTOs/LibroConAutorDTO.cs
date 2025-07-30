@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace HolaMundoWebAPI.DTOs
 {
     public class LibroConAutorDTO: LibroDTO
-    {   
-        public AutorDTO AutorDTO { get; set; }
+    {
+        public List<AutorDTO> Autores { get; set; } = [];
     }
 }
