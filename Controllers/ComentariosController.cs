@@ -46,7 +46,7 @@ namespace HolaMundoWebAPI.Controllers
             return this._mapper.MapeoComentarioAComentarioDto(comentario);
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public async Task<IActionResult> Post(int libroId, ComentarioCreacionDTO comentarioCreacionDTO) {
             var existeLibro = await this._context.Libros.AnyAsync(x => x.Id == libroId);
             if (!existeLibro)
@@ -61,9 +61,9 @@ namespace HolaMundoWebAPI.Controllers
             await _context.SaveChangesAsync();
             var comentarioDTO = _mapper.MapeoComentarioAComentarioDto(comentario);
             return CreatedAtRoute("ObtenerComentario", new { id=comentario.Id, libroId}, comentarioDTO);
-        }
+        }*/
 
-        [HttpPatch("{id}")]
+       /* [HttpPatch("{id}")]
         public async Task<ActionResult> Patch(Guid id,int libroId, JsonPatchDocument<ComentarioPatchDTO> patchDoc)
         {
             if (patchDoc is null)
@@ -92,7 +92,7 @@ namespace HolaMundoWebAPI.Controllers
             this._mapper.MapeoReversoComentarioPatchDtoAComentario(comentarioPatchDto, comentarioDb);
             await _context.SaveChangesAsync();
             return NoContent();
-        }
+        }*/
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(Guid id, int libroId) {

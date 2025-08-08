@@ -2,6 +2,7 @@
 using HolaMundoWebAPI.DTOs;
 using HolaMundoWebAPI.Entidades;
 using HolaMundoWebAPI.Utilidad;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,7 @@ namespace HolaMundoWebAPI.Controllers
 {
     [ApiController]
     [Route("api/libros")]
+    [Authorize]
     public class LibroController : Controller
     {
         private readonly ApplicationDbContext context;

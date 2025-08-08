@@ -388,5 +388,57 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HolaMundoWebAPI.Controllers.UsuariosController",
+    "Method": "login",
+    "RelativePath": "api/usuarios/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credencialesUsuarioDto",
+        "Type": "HolaMundoWebAPI.DTOs.CredencialesUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HolaMundoWebAPI.DTOs.RespuestaAutenticacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HolaMundoWebAPI.Controllers.UsuariosController",
+    "Method": "Registrar",
+    "RelativePath": "api/usuarios/registro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credencialesUsuarioDTO",
+        "Type": "HolaMundoWebAPI.DTOs.CredencialesUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HolaMundoWebAPI.DTOs.RespuestaAutenticacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

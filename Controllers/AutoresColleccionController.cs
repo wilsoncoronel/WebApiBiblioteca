@@ -1,6 +1,7 @@
 ﻿using HolaMundoWebAPI.Datos;
 using HolaMundoWebAPI.DTOs;
 using HolaMundoWebAPI.Utilidad;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,7 @@ namespace HolaMundoWebAPI.Controllers
 {
     [ApiController]
     [Route("api/autores-coleccion")]
+    [Authorize]
     public class AutoresColleccionController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
