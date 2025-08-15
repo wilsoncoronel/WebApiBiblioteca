@@ -1,5 +1,6 @@
 using HolaMundoWebAPI;
 using HolaMundoWebAPI.Datos;
+using HolaMundoWebAPI.Servicios;
 using HolaMundoWebAPI.Utilidad;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlS
 builder.Services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddScoped<UserManager<IdentityUser>>();
 builder.Services.AddScoped<SignInManager<IdentityUser>>();
+builder.Services.AddTransient<IServiciosUsuarios, ServiciosUsuarios>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication().AddJwtBearer(opciones =>
 {

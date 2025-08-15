@@ -18,14 +18,14 @@ namespace HolaMundoWebAPI.Utilidad
         LibroDTO MapeoLibroTbALibroDto(Libro libroTb);
         void MapLibroCreacionDtoToLibro(LibroCreacionDTO dto, Libro libro);
         /*---------------Comentario--------------*/
-        //Comentario MapeoComentarioDtoAComentario(ComentarioCreacionDTO comentarioDto);
+        Comentario MapeoComentarioDtoAComentario(ComentarioCreacionDTO comentarioDto);
         ComentarioPatchDTO MapeoComentarioAComentarioPatchDto(Comentario comentario);
-        //Comentario MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioPatchDto);
+        ///Comentario MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioPatchDto);
         List<ComentarioDTO> MapeoArrayComentarioDtoDesdeComentarios(IEnumerable<Comentario> comentarios);
         ComentarioDTO MapeoComentarioAComentarioDto(Comentario comentario);
         ComentarioCreacionDTO MapeoReversoComentarioAComentarioCreacionDto(Comentario comentario);
-        //Comentario MapeoComentarioCreacionDtoAComentario(ComentarioCreacionDTO comentarioCreacionDto);
-        //void MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioDto, Comentario entidad);
+        Comentario MapeoComentarioCreacionDtoAComentario(ComentarioCreacionDTO comentarioCreacionDto);
+        void MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioDto, Comentario entidad);
 
         /*---------------------AutorLibro-------------------*/
         AutorLibro MapeoAutorLibroDtoAAutorLibroTb(AutorLibroDTO autorLibroDto);
@@ -53,11 +53,14 @@ namespace HolaMundoWebAPI.Utilidad
         {
             entidad.Cuerpo = comentarioDto.Cuerpo;
         }
-        /*public Comentario MapeoComentarioCreacionDtoAComentario(ComentarioCreacionDTO comentarioCreacionDto) {
-            return new Comentario {
+        public Comentario MapeoComentarioCreacionDtoAComentario(ComentarioCreacionDTO comentarioCreacionDto)
+        {
+            return new Comentario
+            {
                 Cuerpo = comentarioCreacionDto.Cuerpo,
+                UsuarioId = "0"
             };
-        }*/
+        }
         public List<ComentarioDTO> MapeoArrayComentarioDtoDesdeComentarios(IEnumerable<Comentario> comentarios) {
             return comentarios.Select(this.MapeoComentarioAComentarioDto).ToList();
         }
@@ -69,29 +72,34 @@ namespace HolaMundoWebAPI.Utilidad
                 Id = comentario.Id,
                 Cuerpo = comentario.Cuerpo,
                 FechaPublicacion = comentario.FechaPublicacion,
+                UsuarioEmail = comentario.Usuario.Email,
+                UsuarioId = comentario.UsuarioId,
             };
         }
-       /* public Comentario MapeoComentarioDtoAComentario(ComentarioCreacionDTO comentarioDto)
+        public Comentario MapeoComentarioDtoAComentario(ComentarioCreacionDTO comentarioDto)
         {
             return new Comentario
             {
                 Cuerpo = comentarioDto.Cuerpo,
+                UsuarioId = comentarioDto.UsuarioId,
 
             };
-        }*/
+        }
         public ComentarioPatchDTO MapeoComentarioAComentarioPatchDto(Comentario comentario) {
             return new ComentarioPatchDTO
             {
                 Cuerpo = comentario.Cuerpo,
             };
         }
-        /*public Comentario MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioPatchDto)
+        public Comentario MapeoReversoComentarioPatchDtoAComentario(ComentarioPatchDTO comentarioPatchDto)
         {
             return new Comentario
             {
                 Cuerpo = comentarioPatchDto.Cuerpo,
+                UsuarioId = comentarioPatchDto.UsuarioId
+
             };
-        }*/
+        }
         public ComentarioCreacionDTO MapeoReversoComentarioAComentarioCreacionDto(Comentario comentario) {
             return new ComentarioCreacionDTO
             {
@@ -193,12 +201,9 @@ namespace HolaMundoWebAPI.Utilidad
                 Titulo = libro.Titulo,
             };
         }
-
         public IEnumerable<LibroDTO> MapeoArrayLibroALibroDto(IEnumerable<Libro> libros) {
             return libros.Select(this.MapeoLibroALibroDto);
-        
         }
-
         public Libro MapeoLibroCreacionDtoALibro(LibroCreacionDTO libroCreacionDto) {
             var libro = new Libro
             {
@@ -209,9 +214,6 @@ namespace HolaMundoWebAPI.Utilidad
             };
             return libro;
         }
-
-
-
         public LibroDTO MapeoLibroTbALibroDto(Libro libroTb) {
             return new LibroDTO
             {
@@ -221,7 +223,6 @@ namespace HolaMundoWebAPI.Utilidad
                     AutorId = id.AutorId,
                     LibroId = id.LibroId,
                     Orden = id.Orden
-                
                 }).ToList()
             };
         }
